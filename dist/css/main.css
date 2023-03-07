@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -316,7 +317,79 @@ html {
           box-sizing: inherit; }
 
 body {
-  color: #F9C802;
-  background: #000; }
+  color: #fff;
+  background: #0d1117;
+  font-family: 'Open Sans', sans-serif; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.header {
+  background-color: #fff;
+  color: #0d1117;
+  padding: 10px;
+  border-radius: 10px; }
+  .header::before {
+    content: " ";
+    background-image: url(/assets/img/github.png);
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: bottom; }
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px; }
+
+.search {
+  padding: 8px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  border: 1px solid transparent; }
+  .search:focus {
+    border: 1px solid #2f7ffc; }
+
+.buttonSearch {
+  background-color: #1f6feb;
+  color: #fff;
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: none;
+  margin-left: 10px;
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out; }
+  .buttonSearch:hover {
+    background-color: #2f7ffc;
+    cursor: pointer; }
+
+.list-item {
+  list-style-type: none;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 10px; }
+
+.list-item > a {
+  color: #000;
+  text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */

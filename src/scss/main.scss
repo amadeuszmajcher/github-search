@@ -1,6 +1,6 @@
 @import "_normalize";
 @import "_variables";
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
 
 html {
   box-sizing: border-box;
@@ -11,6 +11,71 @@ html {
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  color: $white;
+  background: $color-canvas-default;
+  font-family: 'Open Sans', sans-serif;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.header{
+  background-color: $white;
+  color: $color-canvas-default;
+  padding: 10px;
+  border-radius: 10px;
+  &::before{
+    content: " ";
+    background-image: url(/assets/img/github.png);
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: bottom;
+  }
+}
+label{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.search{
+  padding: 8px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  border: 1px solid transparent;
+  &:focus{
+    border: 1px solid $color-accent-emphasis-light;
+  }
+}
+.buttonSearch{
+  background-color: $color-accent-emphasis;
+  color: $white;
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: none;
+  margin-left: 10px;
+  transition: background-color .3s ease-in-out;
+  &:hover{
+    background-color: $color-accent-emphasis-light;
+    cursor: pointer;
+  }
+}
+.list-item{
+  list-style-type: none;
+  background-color: $white;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+.list-item > a{
+  color:$black;
+  text-decoration: none;
 }

@@ -13,18 +13,19 @@ buttonSearch.addEventListener('click', (e) => {
 });
 
 search.value = localStorage.getItem('name');
-const name = localStorage.getItem('name');
+const username = localStorage.getItem('name');
 
-fetch('https://api.github.com/users/'+name+'/repos')
+if(username.length > 0){
+fetch('https://api.github.com/users/'+username+'/repos')
 .then(resp => resp.json())
 .then(resp => {
     const repos = resp;
     for(const repo of repos){
-        list.innerHTML += `<li><a href="${repo.html_url}">${repo.name}</a></li>`;
+        list.innerHTML += `<li class="list-item"><a href="${repo.html_url}">${repo.name}</a></li>`;
     }
 })
 .catch(err => {
     console.log(err);
 })
-
+}
 
