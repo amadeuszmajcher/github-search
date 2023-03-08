@@ -381,15 +381,33 @@ label {
     background-color: #2f7ffc;
     cursor: pointer; }
 
-.list-item {
-  list-style-type: none;
-  background-color: #fff;
-  margin-bottom: 10px;
-  padding: 20px;
-  border-radius: 10px; }
+.repo {
+  max-width: 500px;
+  width: 100%; }
+  .repo p {
+    text-align: center; }
 
-.list-item > a {
-  color: #000;
-  text-decoration: none; }
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .list-item {
+    list-style-type: none;
+    background-color: #fff;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px; }
+    .list-item > a {
+      color: #000;
+      text-decoration: none;
+      -webkit-transition: color .3s ease-in-out;
+      -o-transition: color .3s ease-in-out;
+      transition: color .3s ease-in-out; }
+      .list-item > a:hover {
+        color: #1f6feb; }
 
 /*# sourceMappingURL=main.css.map */

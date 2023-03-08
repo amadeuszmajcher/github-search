@@ -21,7 +21,7 @@ fetch('https://api.github.com/users/'+username+'/repos')
 .then(resp => {
     const repos = resp;
     for(const repo of repos){
-        list.innerHTML += `<li class="list-item"><a href="${repo.html_url}">${repo.name}</a></li>`;
+        list.innerHTML += `<li class="list-item"><a target="_blank" href="${repo.html_url}">${repo.name}</a></li>`;
     }
 })
 .catch(err => {
